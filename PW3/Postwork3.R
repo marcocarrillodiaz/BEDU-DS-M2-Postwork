@@ -23,7 +23,7 @@ df.HGvsAG <- transform(df.HGvsAG,
                        FreqRel=prop.table(df.HGvsAG$Freq),
                        FreqRelAcm=cumsum(prop.table(df.HGvsAG$Freq)))
 
-
+# a. Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa
 df.HG %>% 
   ggplot() +
   aes(x = HG, y = FreqRel) +
